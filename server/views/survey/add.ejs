@@ -1,0 +1,148 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <b> Participant's Personal Information</b>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-group">
+                            <label for="nameTextField"><b>Full Name</b></label>
+                            <input type="text" class="form-control"
+                            id="nameTextField"
+                            placeholder="Please Enter Full name"
+                            name="name" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="contactnoTextField"><b>Contact Number</b></label>
+                            <input type="text" class="form-control"
+                            id="contactnoTextField"
+                            placeholder="Please Enter contact number"
+                            name="contactno" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="emailTextField"><b>Email</b></label>
+                            <input type="text" class="form-control"
+                            id="emailTextField"
+                            placeholder="Please Enter email address"
+                            name="email" required>
+                        </div>                      
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <b>Covid Related Shopping Questons</b>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-group">
+                            <label for="nameTextField">Did you purchase more electronic Products in order to become more digital due to isolation</label>
+                            <select name="accomplish" id="accomplish" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                                <option value="Yes" selected>Yes</option>
+                                <option value="No">No</option>
+                                <option value="Maybe">Maybe</option>
+                            </select>                            
+                        </div>
+                        <div class="form-group">
+                            <label for="nameTextField">Are the following items purchased for anyone else or as a gift?</label>
+                            <select name="recommend" id="recommend" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Highly Likely" selected>Yes</option>
+                              <option value="Likely">No</option>
+                              <option value="Not Sure">Not Sure</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameTextField">How many times did you have to visit the hospital?</label>
+                            <select name="bestmatch" id="bestmatch" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Best Match" selected>1 to 5</option>
+                              <option value="Match">Never</option>
+                              <option value="Not Match">More than you will beleive</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameTextField">Based on the ration of your income over expenditure are you at a better ratio now compared to before Corona?</label>
+                            <select name="easyuse" id="easyuse" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Yes" selected>Yes my ratio is at 1 or higher and I am managing well</option>
+                              <option value="Debt">No unfortunately I am in debt</option>
+                              <option value="Difficult">I don't know I have to configure</option>
+                          </select>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <b>The following questions will be based on your Income and Expenditure during the Corona Period</b>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-group">
+                            <label for="nameTextField">Are you spending more than usual during the Corona period ?</label>
+                            <select name="satisfied" id="satisfied" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Yes" selected>Yes</option>
+                              <option value="No">No</option>
+                              <option value="Not Sure">Not Sure</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameTextField">In your opinion has the cost of electronics or any other consumer goods changed during the corona period?</label>
+                            <select name="competitive" id="competitive" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Yes" selected>Yes it has increased</option>
+                              <option value="No">No It remained the same</option>
+                              <option value="No">It actually decreased</option>
+                              <option value="N/A">I am not certain</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameTextField">Has your overall Income changed during the Corona Period? </label>
+                            <select name="oftenuse" id="oftenuse" class="form-select form-select-sm" aria-label=".form-select-lg example">
+                              <option value="Yes" selected>Yes Hourly</option>
+                              <option value="same">No it remained the same</option>
+                              <option value="lost"> I lost my job</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Comments</label>
+                          <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Please Enter your comments or concerns"></textarea>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit"></i> Submit</button>
+            
+                <a href="/survey-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+                
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
